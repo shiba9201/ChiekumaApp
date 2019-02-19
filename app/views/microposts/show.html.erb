@@ -1,2 +1,16 @@
-<h1>Microposts#show</h1>
-<p>Find me in app/views/microposts/show.html.erb</p>
+<h3>料理名:<%= @microposts.name %></h3>
+<h3>おすすめポイント:<%= @microposts.recommendation %></h3>
+<h4>お店情報</h4>
+<h3>店名：<%= @microposts.store %></h3>
+<h3>場所：<%= @microposts.plase %></h3>
+<%= @microposts.time %>
+<%= @microposts.holiday %>
+<%= image_tag @microposts.picture.url if @microposts.picture %>
+
+
+
+<% if current_user?(@microposts.user) %>
+<%= link_to "編集", edit_micropost_path(@microposts) %>
+<%= link_to "削除", micropost_path(@microposts), method: :delete,
+                                       data: { confirm: "本当に削除してよろしいですか？" } %>
+<% end %>                                       
