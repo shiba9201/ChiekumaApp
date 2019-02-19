@@ -3,8 +3,17 @@
     <%= link_to "chiekuma", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "新規登録",   '#' %></li>
-        <li><%= link_to "ログイン",   '#' %></li>
+        <% if logged_in? %>
+        <li><%= link_to "投稿", '#' %></li>
+        <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
+       ↓あとでshowに移動
+        <li><%= link_to "編集", edit_user_path(current_user) %></li>
+      　↑
+        <li><%= link_to "ユーザー", current_user  %></li>
+        <% else %>
+        <li><%= link_to "新規登録",   signup_path %></li>
+        <li><%= link_to "ログイン",   login_path %></li>
+        <% end %>
       </ul>
     </nav>
   </div>

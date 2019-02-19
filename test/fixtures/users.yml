@@ -1,0 +1,4 @@
+takumi:
+  name: ozawa takumi
+  email: ozawa@takumi.com
+  password_digest: <%= User.digest('password') %>
