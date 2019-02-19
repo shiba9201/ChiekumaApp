@@ -2,3 +2,8 @@ takumi:
   name: ozawa takumi
   email: ozawa@takumi.com
   password_digest: <%= User.digest('password') %>
+  
+arisu:
+  name: hayashi arisu
+  email: hayashi@arisu.com
+  password_digest: <%= User.digest('password') %>

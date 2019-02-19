@@ -1,0 +1,33 @@
+<%= form_for(@micropost) do |f| %>
+    
+      <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png'  %>
+   
+      <%= f.label :name %>
+      <%= f.text_field :name, calss: 'form-control' %>
+
+      <%= f.label :recommendation %>
+      <%= f.text_field :recommendation,placeholder: "口に入れた瞬間にとろけます", calss: 'form-control' %>
+
+      <%= f.label :store %>
+      <%= f.text_field :store, calss: 'form-control' %>
+      
+      <%= f.label :plase %>
+      <%= f.text_field :plase, calss: 'form-control' %>
+
+      <%= f.label :time %>
+      <%= f.text_field :time,placeholder: "6:00~20:00", calss: 'form-control' %>
+
+      <%= f.label :holiday %>
+      <%= f.text_field :holiday, calss: 'form-control' %>
+      
+      <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>
+
+<script type="text/javascript">
+  $('#micropost_picture').bind('change', function() {
+    var size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert('Maximum file size is 5MB. Please choose a smaller file.');
+    }
+  });
+</script>

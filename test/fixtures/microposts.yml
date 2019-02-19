@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  picture: MyString
+  name: MyString
+  category: MyString
+  recommendation: MyText
+  store: MyString
+  time: MyString
+  holiday: MyString
+  plase: MyString
+
+two:
+  picture: MyString
+  name: MyString
+  category: MyString
+  recommendation: MyText
+  store: MyString
+  time: MyString
+  holiday: MyString
+  plase: MyString
