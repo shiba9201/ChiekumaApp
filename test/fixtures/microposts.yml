@@ -3,7 +3,7 @@
 one:
   picture: MyString
   name: MyString
-  category: MyString
+  category_id: Myinteger
   recommendation: MyText
   store: MyString
   time: MyString
@@ -13,7 +13,7 @@ one:
 two:
   picture: MyString
   name: MyString
-  category: MyString
+  category_id: Myinteger
   recommendation: MyText
   store: MyString
   time: MyString

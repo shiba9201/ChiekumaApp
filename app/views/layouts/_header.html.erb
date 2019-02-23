@@ -6,9 +6,6 @@
         <% if logged_in? %>
         <li><%= link_to "投稿", new_micropost_path %></li>
         <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
-       ↓あとでshowに移動
-        <li><%= link_to "編集", edit_user_path(current_user) %></li>
-      　↑
         <li><%= link_to "ユーザー", current_user  %></li>
         <% else %>
         <li><%= link_to "新規登録",   signup_path %></li>

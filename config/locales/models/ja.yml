@@ -1,0 +1,29 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        id: ID
+        created_at: 登録日時
+        updated_at: 更新日時
+        name: アカウント名
+        email: メールアドレス
+        password: パスワード
+        
+ja:
+  activerecord:
+    models:
+      micropost:　投稿
+    attributes:
+      micropost:
+        id: ID
+        created_at: 登録日時
+        updated_at: 更新日時
+        picture: 写真
+        name: 料理名
+        recommendation: おすすめポイント
+        store: 店名
+        time: 営業時間
+        holiday: 休業日
+        plase: 場所

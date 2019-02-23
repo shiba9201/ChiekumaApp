@@ -1,7 +1,15 @@
 require 'test_helper'
 
 class MicropostTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  
+  def setup 
+    @user = users(:takumi)
+    @micropost = @user.microposts.new(name:"タピオカ", recommendation:"つぶつぶ！",
+                               picture:"img", store:"ゴンチャ")
+  end 
+  
+  test "content should be present" do
+    @micropost.name = "   "
+    assert_not @micropost.valid?
+  end
 end

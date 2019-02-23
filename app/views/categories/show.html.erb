@@ -1,4 +1,6 @@
-<h1>あとで消す</h1>
+<h1>消す</h1>
+<h1>消す</h1>
+
 <%= link_to "チーズ", category_path(1) %>
 <%= link_to "タピオカ", category_path(2) %>
 <%= link_to "肉", category_path(3) %>
@@ -8,5 +10,6 @@
 <%= link_to "抹茶", category_path(7) %>
 <%= link_to "オムレツ", category_path(8) %>
 <%= link_to "その他", category_path(9) %>
-
-<%= render @microposts %>
+<ul class="category">
+ <%= render @category %>
+</ul>
