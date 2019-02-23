@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :users, except: :index
   resources :microposts
   resources :categories, only: :show
+  resources :likes, only: [:create, :destroy]
 end

@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
   has_many :microposts, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :liked_posts, through: :likes, source: :micropost
   mount_uploader :picture, PictureUploader
   before_save { email.downcase! }
   validates :name,  presence: true, length: { maximum: 50 }

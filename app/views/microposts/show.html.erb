@@ -1,3 +1,4 @@
+<li id="micropost-<%= @microposts.id %>" data-micropost-id="<%= @microposts.id %>">
 <% provide(:title, @microposts.name) %>
 
 <h3>料理名:<%= @microposts.name %></h3>
@@ -8,6 +9,7 @@
 <%= @microposts.time %>
 <%= @microposts.holiday %>
 <%= image_tag @microposts.picture.url unless @microposts.picture.blank? %>
+<%= render "likes/like", micropost: @microposts %>
 
 
 

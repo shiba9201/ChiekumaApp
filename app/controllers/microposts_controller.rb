@@ -43,6 +43,7 @@ class MicropostsController < ApplicationController
     flash[:success] = "投稿を削除しました"
     redirect_to  root_url
   end 
+
   
 
   
