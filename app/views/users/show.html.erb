@@ -8,9 +8,10 @@
 <% if @user.likes.any? %>
   <% @likes.each do |like| %>
     <%= image_tag like.picture.url unless like.picture.blank? %>
-    <%= like.name %>
+    <%= link_to like.name, like %>
   <% end %>
 <% end %>
+
 
 <h1>投稿した内容</h1>
 <div class="col-md-8">

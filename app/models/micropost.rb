@@ -13,7 +13,7 @@ class Micropost < ApplicationRecord
   
   def like(user)
     likes.create(user_id: user.id)
-  end 
+  end
   
   def unlike(user)
     likes.find_by(user_id: user.id).destroy
