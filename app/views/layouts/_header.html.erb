@@ -1,8 +1,8 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header>
   <div class="container">
     <%= link_to "chiekuma", root_path, id: "logo" %>
     <nav>
-      <ul class="nav navbar-nav navbar-right">
+      <ul>
         <% if logged_in? %>
         <li><%= link_to "投稿", new_micropost_path %></li>
         <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
