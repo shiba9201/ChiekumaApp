@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190223064846) do
+ActiveRecord::Schema.define(version: 20190226065053) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -28,21 +28,8 @@ ActiveRecord::Schema.define(version: 20190223064846) do
     t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
-  create_table "microposts", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "picture"
-    t.string "name"
-    t.integer "category_id"
-    t.text "recommendation"
-    t.string "store"
-    t.string "time"
-    t.string "holiday"
-    t.string "plase"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "character_id"
-    t.index ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
-  end
+# Could not dump table "microposts" because of following StandardError
+#   Unknown type 'json' for column 'images'
 
   create_table "users", force: :cascade do |t|
     t.string "name"
