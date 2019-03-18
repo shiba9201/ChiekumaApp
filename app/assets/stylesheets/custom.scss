@@ -1,2 +1,217 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/*　microposts/index introduce　 */ 
+
+.logo{
+  font-family: "Comic Sans MS";
+}
+
+.sub-logo{
+  font-size: 20px;
+  font-family: "arial unicode ms";
+}
+
+#header {
+  z-index: 9999;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+
+
+.menu{
+    font-size:12px;
+    vertical-align:middle;
+}
+
+
+
+
+
+
+
+/*　microposts/index introduce　 */ 
+
+.top-wrapper {
+  padding: 180px 0 100px 0;
+  background-image: url("/assets/chies.png");
+  background-size: cover;
+  text-align: center;
+  color: black;
+}
+
+.top-wrapper h1 {
+  opacity: 0.7;
+  font-size: 45px;
+  letter-spacing: 5px;
+}
+
+.top-wrapper p {
+  opacity: 0.7;
+}
+
+
+
+/*　microposts/index メイン　 */ 
+.category-link{
+  color: black;
+}
+
+.index-img{
+  height: 200px;
+  width: 300px;
+  overflow: hidden;
+}
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+.micropost-name{
+  list-style: none;
+}
+
+.post-image{
+  height: 215px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.index-post-image{
+  position: relative;
+}
+
+.postindex-name-link{
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "arial unicode ms";
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+}
+
+
+
+/*　users/show メイン　 */ 
+
+.show-img{
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+}
+
+.user-name{
+  list-style: none;
+}
+
+/*　microposts/show 　 */ 
+
+.micropost-show-page{
+  height: 800px;
+  background-color: #F9E7C4;
+}
+
+.micropost-show-img{
+   width: 100%;
+   margin: 0 auto;
+}
+
+
+.punctuation{
+ padding-bottom: 5px;
+ border-top: solid 1px black;
+ border-bottom: solid 1px black;
+}
+
+.post-details{
+  color: #542F04;
+  font-family: "arial unicode ms";
+}
+
+.micropost-img-block{
+  position: relative;
+}
+
+.like{
+  position: absolute;
+  top: 100%;
+  left: 90%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+}
+
+.heart-icon-li{
+  list-style: none;
+}
+
+.bar{
+  color: #DDDDDD;
+}
+
+/*　microposts/new 　 */ 
+.form-block{
+  height: 900px;
+  background-color: #F9E7C4;
+}
+
+.post-form{
+  padding-top: 30px;
+  height: 575px;
+  border-radius: 20px;
+}
+
+.required-tag{
+  color: white;
+  font-size: 10px;
+  background-color: #FF0033;
+   background-size: cover;
+  border-radius: 20px;
+}
+
+.optional-tag{
+    color: white;
+  font-size: 10px;
+  background-color: #333333;
+   background-size: cover;
+  border-radius: 20px;
+}
+
+.form-title{
+  font-family: "arial unicode ms";
+  font-size: 20px;
+  font-weight: 900;
+}
+
+/*　option　 */ 
+
+.option{
+  background-color: #F9E7C4;
+  height: 300px;
+}
+
+.option-contents{
+  padding: 40px;
+}

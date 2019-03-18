@@ -6,9 +6,15 @@ class MicropostsController < ApplicationController
     @microposts = Micropost.all
   end 
   
+  def show
+     @microposts = Micropost.find(params[:id])
+     @time = @microposts.created_at.strftime("%Y-%m-%d %H:%M") 
+  end
+  
   def new
     @micropost = current_user.microposts.build if logged_in?
   end
+  
   
   def create
     @micropost = current_user.microposts.build(micropost_params)
@@ -34,17 +40,16 @@ class MicropostsController < ApplicationController
     end 
   end 
 
-  def show
-     @microposts = Micropost.find(params[:id])
-  end
-
   def destroy
     @micropost.destroy
     flash[:success] = "投稿を削除しました"
     redirect_to  root_url
   end 
-
   
+  def posted
+    @user  = User.find(params[:id])
+    @microposts = @user.microposts
+  end
 
   
   private

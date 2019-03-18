@@ -1,15 +1,45 @@
-<h1>消す</h1>
-<h1>消す</h1>
+<div class="">
+  <h1 class="text-center">CHIEKUMA</h1>
+</div>
 
-<%= link_to "チーズ", category_path(1) %>
-<%= link_to "タピオカ", category_path(2) %>
-<%= link_to "肉", category_path(3) %>
-<%= link_to "ラーメン", category_path(4) %>
-<%= link_to "韓国", category_path(5) %>
-<%= link_to "いちご", category_path(6) %>
-<%= link_to "抹茶", category_path(7) %>
-<%= link_to "オムレツ", category_path(8) %>
-<%= link_to "その他", category_path(9) %>
-<ul class="category">
- <%= render @category %>
+<div class="index-page">
+<div class="container d-none d-md-block mb-3 mt-5">
+<ul class='nav nav-tabs nav-justified mx-auto', style="width: 700px;">
+<li class='active'>
+<%= link_to "チーズ", category_path(1), class:"category-link nav-link" %>
+</li>
+<li class=''>
+<%= link_to "タピオカ", category_path(2), class:"category-link nav-link" %>
+</li>
+<li class=''>
+<%= link_to "肉", category_path(3), class:" category-link nav-link" %>
+</li>
+<li class=''>
+<%= link_to "ラーメン", category_path(4), class:"category-link nav-link" %>
+</li>
+<li class=''>
+<%= link_to "韓国", category_path(5), class:"category-link nav-link" %>
+</li>
+<li class=''>
+<%= link_to "いちご", category_path(6), class:"category-link nav-link" %>
+</li>
+<li class=''>
+<%= link_to "抹茶", category_path(7), class:"category-link nav-link" %>
+</li>
+<li class=''>
+<%= link_to "オムレツ", category_path(8), class:"category-link nav-link" %>
+</li>
 </ul>
+</div>
+</nav>
+
+
+
+<div class="container">
+<div class="row">
+   <%= render @category %>
+</div>
+</div>
+
+<div class="index-page">
+

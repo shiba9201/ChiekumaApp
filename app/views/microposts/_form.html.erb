@@ -1,31 +1,37 @@
-<%= form_for(@micropost) do |f| %>
-<%= render 'shared/error_messages', object: f.object %>
+<div class="post-form col-11 col-md-5 mx-auto">
+    <%= form_for(@micropost) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
     
-      <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png'  %>
-
-      <%= f.label :name %>
-      <%= f.text_field :name, calss: 'form-control' %>
-
-      <%= f.label :recommendation %>
-      <%= f.text_field :recommendation,placeholder: "口に入れた瞬間にとろけます", calss: 'form-control' %>
-
-      <%= f.label :store %>
-      <%= f.text_field :store, calss: 'form-control' %>
-      
-      <%= f.label :plase %>
-      <%= f.text_field :plase, calss: 'form-control' %>
-
-      <%= f.label :time %>
-      <%= f.text_field :time,placeholder: "6:00~20:00", calss: 'form-control' %>
-
-      <%= f.label :holiday %>
-      <%= f.text_field :holiday, calss: 'form-control' %>
-      
-      <%= f.label :"カテゴリー" %><br>
+      <%= f.label :"カテゴリー" %><span class="required-tag"> 必須</span>
   　   <%= f.select :category_id, [["チーズ", 1], ["タピオカ", 2], ["肉", 3], ["ラーメン", 4], ["韓国", 5], ["いちご", 6],["抹茶",7],["オムレツ",8],["その他",9]] ,class:"form-control" %>
       
-      <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+    　<%= f.label :picture %><span class="required-tag"> 必須</span>
+      <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png'%>
+      
+      <%= f.label :name %><span class="required-tag"> 必須</span>
+      <%= f.text_field :name, placeholder: "例）とろとろチーズ",calss: 'form-control' %> 
+
+      <%= f.label :recommendation %><span class="required-tag"> 必須</span>
+      <%= f.text_field :recommendation,placeholder: "口に入れた瞬間にとろけます", calss: 'form-control' %>
+
+      <%= f.label :store %><span class="required-tag"> 必須</span>
+      <%= f.text_field :store, placeholder: "例）とろとろチーズ",calss: 'form-control' %>
+      
+      <%= f.label :plase %><span class="optional-tag"> 任意</span>
+      <%= f.text_field :plase, placeholder: "例）とろとろチーズ",calss: 'form-control' %>
+
+      <%= f.label :time %><span class="optional-tag"> 任意</span>
+      <%= f.text_field :time,placeholder: "6:00~20:00", calss: 'form-control' %>
+
+      <%= f.label :holiday %><span class="optional-tag"> 任意</span>
+      <%= f.text_field :holiday, placeholder: "例）とろとろチーズ",calss: 'form-control' %>
+
+      <%= f.submit yield(:button_text), class: "btn btn-primary mt-3" %>
+
 <% end %>
+</div>
+
+
 
 <script type="text/javascript">
   $('#micropost_picture').bind('change', function() {

@@ -1,27 +1,12 @@
 <% provide(:title, @user.name) %>
-<h1>あとで消す</h1>
-<%= @user.name %>
-<%= image_tag @user.picture.url if @user.picture? %>
-<%= @user.email %>
 
-<h1>いいねした投稿</h1>
-<% if @user.likes.any? %>
-  <% @likes.each do |like| %>
-    <%= image_tag like.picture.url unless like.picture.blank? %>
-    <%= link_to like.name, like %>
-  <% end %>
-<% end %>
+<%= render 'shared/profile' %>
 
-
-<h1>投稿した内容</h1>
-<div class="col-md-8">
-    <% if @user.microposts.any? %>
-        <%= render @microposts %>
-      <%= will_paginate @microposts %>
-    <% end %>
+<div class="container">
+  <div class="row">
+    
+    <%= render @likes %>
+  </div>
 </div>
 
 
-<%= link_to "編集", edit_user_path(@user) %>
-<%= link_to "削除", @user, method: :delete,
-                             data: { confirm: "本当に削除してもいいですか?" } %>

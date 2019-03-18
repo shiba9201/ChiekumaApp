@@ -1,17 +1,39 @@
-<header>
-  <div class="container">
-    <%= link_to "chiekuma", root_path, id: "logo" %>
-    <nav>
-      <ul>
-        <% if logged_in? %>
-        <li><%= link_to "投稿", new_micropost_path %></li>
-        <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
-        <li><%= link_to "ユーザー", current_user  %></li>
-        <% else %>
-        <li><%= link_to "新規登録",   signup_path %></li>
-        <li><%= link_to "ログイン",   login_path %></li>
-        <% end %>
-      </ul>
-    </nav>
+
+<nav id="topNav header" class="navbar fixed-top navbar-toggleable-sm navbar-light bg-light">
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+    <span class="navbar-toggler-icon"></span>
+</button>
+  <%= link_to "CHIEKUMA", root_path, class:"logo navbar-brand mx-auto" %>
+<div class="navbar-collapse collapse">
+   <ul class="nav navbar-nav ml-auto">
+    <% if logged_in? %>
+     <li class="nav-item"><%= link_to "投稿", new_micropost_path, class:"nav-link text-center" %></li>
+     <li class="nav-item"><%= link_to current_user.name, current_user, class:"nav-link text-center" %></li>
+   <% else %>
+     <li class="nav-item"><%= link_to "新規登録",   signup_path, class:"nav-link text-center" %></li>
+     <li class="nav-item"><%= link_to "ログイン",   login_path, class:"nav-link text-center" %></li>
+   <% end %>
+    </ul>
+</div>
+
+<!-- ドロップダウン(md以下表示)-->
+<button class="navbar-toggler navbar-toggler-left py-auto" type="button" data-toggle="collapse" data-target=".category">
+    <div class="menu">▼カテゴリ</div>
+</button>
+<div class="category collapse">
+   <ul class="nav navbar-nav ml-auto">
+  　<li class="nav-item"><%= link_to "チーズ", category_path(1), class:"nav-link text-center" %>
+    <li class="nav-item"><%= link_to "タピオカ", category_path(2), class:"nav-link text-center" %>
+    <li class="nav-item"><%= link_to "肉", category_path(3), class:"nav-link text-center" %>
+    <li class="nav-item"><%= link_to "ラーメン", category_path(4), class:"nav-link text-center" %>
+    <li class="nav-item"><%= link_to "韓国", category_path(5), class:"nav-link text-center" %>
+    <li class="nav-item"><%= link_to "いちご", category_path(6), class:"nav-link text-center" %>
+    <li class="nav-item"><%= link_to "抹茶", category_path(7), class:"nav-link text-center" %>
+    <li class="nav-item"><%= link_to "オムレツ", category_path(8),class:"nav-link text-center" %>
+    <li class="nav-item"><%= link_to "その他", category_path(9), class:"nav-link text-center" %>
+   </ul>
   </div>
-</header>
+
+  
+</nav>
+

@@ -1,15 +1,15 @@
 <% provide(:title, "ログイン") %>
 
-<h1>あとで消す</h1>
-
+<div class="form-block pt-3">
+<div class="container">
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="post-form col-11 col-md-5 mx-auto">
     <%= form_for(:session, url: login_path) do |f| %>
 
-      <%= f.label :email %>
+      <%= f.label :email, "メールアドレス" %>
       <%= f.email_field :email, class: 'form-control' %>
 
-      <%= f.label :password %>
+      <%= f.label :password, "パスワード"%>
       <%= f.password_field :password, class: 'form-control' %>
       
       <%= f.label :remember_me, class: "checkbox inline" do %>
@@ -22,4 +22,6 @@
 
     <p>新規登録がまだお済みでない方 <%= link_to "新規登録", signup_path %></p>
   </div>
+</div>
+</div>
 </div>

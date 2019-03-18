@@ -1,4 +1,9 @@
-<li>
-  <%= image_tag micropost.picture.url(size:50) unless micropost.picture.blank? %>
-  <%= link_to micropost.name, micropost %>
-</li>
+<div class="col-12 col-md-4 text-white no-gutters">
+  <div class="text-center">
+    <%= link_to micropost do %>
+      <%= image_tag micropost.picture.url, class:"index-post-image img-fluid post-image" %>
+    <% end %>
+    <li class="micropost-name nav-item"><%= link_to micropost.name, micropost, class:"postindex-name-link" %></li>
+  </div>
+</div>
+
