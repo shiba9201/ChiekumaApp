@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20190226060821) do
     t.integer "user_id"
     t.string "picture"
     t.string "name"
-    t.integer "category_id"
+    t.string "category_id"
     t.text "recommendation"
     t.string "store"
     t.string "time"
