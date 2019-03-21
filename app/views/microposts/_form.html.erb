@@ -9,22 +9,22 @@
       <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png'%>
       
       <%= f.label :name %><span class="required-tag"> 必須</span>
-      <%= f.text_field :name, placeholder: "例）とろとろチーズ",calss: 'form-control' %> 
+      <%= f.text_field :name, placeholder: "例）オムハヤシ",calss: 'form-control' %> 
 
       <%= f.label :recommendation %><span class="required-tag"> 必須</span>
       <%= f.text_field :recommendation,placeholder: "口に入れた瞬間にとろけます", calss: 'form-control' %>
 
       <%= f.label :store %><span class="required-tag"> 必須</span>
-      <%= f.text_field :store, placeholder: "例）とろとろチーズ",calss: 'form-control' %>
+      <%= f.text_field :store, placeholder: "例）chiekuma",calss: 'form-control' %>
       
       <%= f.label :plase %><span class="optional-tag"> 任意</span>
-      <%= f.text_field :plase, placeholder: "例）とろとろチーズ",calss: 'form-control' %>
+      <%= f.text_field :plase, placeholder: "例）渋谷",calss: 'form-control' %>
 
       <%= f.label :time %><span class="optional-tag"> 任意</span>
       <%= f.text_field :time,placeholder: "6:00~20:00", calss: 'form-control' %>
 
       <%= f.label :holiday %><span class="optional-tag"> 任意</span>
-      <%= f.text_field :holiday, placeholder: "例）とろとろチーズ",calss: 'form-control' %>
+      <%= f.text_field :holiday, placeholder: "例）水曜日",calss: 'form-control' %>
 
       <%= f.submit yield(:button_text), class: "btn btn-primary mt-3" %>
 
