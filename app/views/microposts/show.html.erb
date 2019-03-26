@@ -1,39 +1,32 @@
 <li class="heart-icon-li", id="micropost-<%= @microposts.id %>" data-micropost-id="<%= @microposts.id %>">
 <% provide(:title, @microposts.name) %>
-
 <div class="micropost-show-page">
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-lg-6 mt-3 mx-auto">
-      <div class="micropost-img-block">
-      <%= image_tag (@microposts.picture.url), class:"img-fluid micropost-show-img mx-auto" %>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6 mt-3 mx-auto">
+        <div class="micropost-img-block">
+          <%= image_tag (@microposts.picture.url), class:"img-fluid micropost-show-img mx-auto" %>
           <%= render "likes/like", micropost: @microposts, class:"heart-icon" %>
-      </div>
-      <p class="text-center post-details pt-3"><%= @microposts.name %></p>
-      <div class='published_at' style='font-weight: 400;font-size: 0.9em;text-align: left;color:#9b9c68;background-color:inherit;'>
-       <%= @time %>
-　　　</div>
-
-　　　<div class="post-details">
-       <h4 class="punctuation">おすすめポイント</h4>
-      <p><%= @microposts.recommendation %></p>
-      <h4 class="punctuation">お店情報</h4>
-      <p>店名：<%= @microposts.store %></p>
-      <P>場所：<%= @microposts.plase %></P>
-      <P>営業時間：<%= @microposts.time %></P>
-      <p>定休日：<%= @microposts.holiday %></p>
+        </div>
+          <p class="text-center post-details pt-3"><%= @microposts.name %></p>
+          <div class='published_at' style='font-weight: 400;font-size: 0.9em;text-align: left;color:#9b9c68;background-color:inherit;'>
+          <%= @time %>
+　　　 </div>
+        <div class="post-details">
+          <h4 class="punctuation">おすすめポイント</h4>
+          <p><%= @microposts.recommendation %></p>
+          <h4 class="punctuation">お店情報</h4>
+          <p>店名：<%= @microposts.store %></p>
+          <P>場所：<%= @microposts.plase %></P>
+          <P>営業時間：<%= @microposts.time %></P>
+          <p>定休日：<%= @microposts.holiday %></p>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
 <% if current_user?(@microposts.user) %>
 <%= link_to "編集", edit_micropost_path(@microposts) %>
 <%= link_to "削除", micropost_path(@microposts), method: :delete,
                                        data: { confirm: "本当に削除してよろしいですか？" } %>
 <% end %>                                       
-
 </div>
