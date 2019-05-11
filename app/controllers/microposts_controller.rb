@@ -3,7 +3,7 @@ class MicropostsController < ApplicationController
   before_action :correct_user, only: :destroy 
   
   def index
-    @microposts = Micropost.all
+    @microposts = Micropost.search(params[:search])
   end 
   
   def show
@@ -50,6 +50,7 @@ class MicropostsController < ApplicationController
     @user  = User.find(params[:id])
     @microposts = @user.microposts
   end
+
 
   
   private

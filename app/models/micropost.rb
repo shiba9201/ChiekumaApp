@@ -31,5 +31,10 @@ class Micropost < ApplicationRecord
     end
   end
   
+ def self.search(search)
+   return Micropost.all unless search
+   Micropost.where(['content LIKE ?', "%#{search}%"])
+ end 
+  
 
 end
