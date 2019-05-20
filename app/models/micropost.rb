@@ -33,7 +33,7 @@ class Micropost < ApplicationRecord
   
  def self.search(search)
    return Micropost.all unless search
-   Micropost.where(['content LIKE ?', "%#{search}%"])
+   Micropost.where(['name LIKE ?', "%#{search}%"])
  end 
   
 

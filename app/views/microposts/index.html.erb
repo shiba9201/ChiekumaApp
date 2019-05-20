@@ -2,11 +2,13 @@
       <div class="container">
         <h1 class="logo">CHIEKUMA</h1>
         <p class="sub-logo">〜この世の全ての○○好きに捧ぐ〜</p>
-        <P>検索</P>
+         <p>検索</p>
+        <div class="search_container mx-auto">
         <%= form_tag(microposts_path, :method => 'get') do %>
           <%= text_field_tag :search %>
-          <%= submit_tag 'Search', :name => nil %>
+          <%= submit_tag '検索', :name => nil %>
         <% end %>
+        </div>
       </div>
 </div>
 
